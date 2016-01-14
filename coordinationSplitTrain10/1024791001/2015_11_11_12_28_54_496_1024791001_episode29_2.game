@@ -1,0 +1,446 @@
+!!burlap.behavior.stochasticgames.GameAnalysis
+jointActions: [!action 'agent0:north agent0;agent1:south agent1', !action 'agent0:north
+    agent0;agent1:west agent1', !action 'agent0:east agent0;agent1:west agent1', !action 'agent0:east
+    agent0;agent1:west agent1', !action 'agent0:east agent0;agent1:west agent1', !action 'agent0:east
+    agent0;agent1:noop agent1', !action 'agent0:south agent0;agent1:north agent1']
+jointRewards:
+- {agent0: 0.0, agent1: 0.0}
+- {agent0: 0.0, agent1: 0.0}
+- {agent0: 0.0, agent1: 0.0}
+- {agent0: 0.0, agent1: 0.0}
+- {agent0: 0.0, agent1: 0.0}
+- {agent0: 0.0, agent1: 0.0}
+- {agent0: 1.0, agent1: 1.0}
+states:
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '1'}
+    - {attribute: playerNum, value: '0'}
+  - name: agent1
+    object_class: agent
+    values:
+    - {attribute: x, value: '4'}
+    - {attribute: y, value: '1'}
+    - {attribute: playerNum, value: '1'}
+  - name: dimensionlessHorizontalWall0
+    object_class: dimensionlessHorizontalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '4'}
+    - {attribute: pos, value: '0'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessHorizontalWall1
+    object_class: dimensionlessHorizontalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '4'}
+    - {attribute: pos, value: '3'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessVerticalWall0
+    object_class: dimensionlessVerticalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '2'}
+    - {attribute: pos, value: '0'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessVerticalWall1
+    object_class: dimensionlessVerticalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '2'}
+    - {attribute: pos, value: '5'}
+    - {attribute: wallType, value: '0'}
+  - name: goal0
+    object_class: goal
+    values:
+    - {attribute: x, value: '4'}
+    - {attribute: y, value: '1'}
+    - {attribute: gt, value: '1'}
+  - name: goal1
+    object_class: goal
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '1'}
+    - {attribute: gt, value: '2'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '2'}
+    - {attribute: playerNum, value: '0'}
+  - name: agent1
+    object_class: agent
+    values:
+    - {attribute: x, value: '4'}
+    - {attribute: y, value: '0'}
+    - {attribute: playerNum, value: '1'}
+  - name: dimensionlessHorizontalWall0
+    object_class: dimensionlessHorizontalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '4'}
+    - {attribute: pos, value: '0'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessHorizontalWall1
+    object_class: dimensionlessHorizontalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '4'}
+    - {attribute: pos, value: '3'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessVerticalWall0
+    object_class: dimensionlessVerticalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '2'}
+    - {attribute: pos, value: '0'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessVerticalWall1
+    object_class: dimensionlessVerticalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '2'}
+    - {attribute: pos, value: '5'}
+    - {attribute: wallType, value: '0'}
+  - name: goal0
+    object_class: goal
+    values:
+    - {attribute: x, value: '4'}
+    - {attribute: y, value: '1'}
+    - {attribute: gt, value: '1'}
+  - name: goal1
+    object_class: goal
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '1'}
+    - {attribute: gt, value: '2'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '2'}
+    - {attribute: playerNum, value: '0'}
+  - name: agent1
+    object_class: agent
+    values:
+    - {attribute: x, value: '3'}
+    - {attribute: y, value: '0'}
+    - {attribute: playerNum, value: '1'}
+  - name: dimensionlessHorizontalWall0
+    object_class: dimensionlessHorizontalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '4'}
+    - {attribute: pos, value: '0'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessHorizontalWall1
+    object_class: dimensionlessHorizontalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '4'}
+    - {attribute: pos, value: '3'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessVerticalWall0
+    object_class: dimensionlessVerticalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '2'}
+    - {attribute: pos, value: '0'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessVerticalWall1
+    object_class: dimensionlessVerticalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '2'}
+    - {attribute: pos, value: '5'}
+    - {attribute: wallType, value: '0'}
+  - name: goal0
+    object_class: goal
+    values:
+    - {attribute: x, value: '4'}
+    - {attribute: y, value: '1'}
+    - {attribute: gt, value: '1'}
+  - name: goal1
+    object_class: goal
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '1'}
+    - {attribute: gt, value: '2'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '2'}
+    - {attribute: playerNum, value: '0'}
+  - name: agent1
+    object_class: agent
+    values:
+    - {attribute: x, value: '2'}
+    - {attribute: y, value: '0'}
+    - {attribute: playerNum, value: '1'}
+  - name: dimensionlessHorizontalWall0
+    object_class: dimensionlessHorizontalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '4'}
+    - {attribute: pos, value: '0'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessHorizontalWall1
+    object_class: dimensionlessHorizontalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '4'}
+    - {attribute: pos, value: '3'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessVerticalWall0
+    object_class: dimensionlessVerticalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '2'}
+    - {attribute: pos, value: '0'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessVerticalWall1
+    object_class: dimensionlessVerticalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '2'}
+    - {attribute: pos, value: '5'}
+    - {attribute: wallType, value: '0'}
+  - name: goal0
+    object_class: goal
+    values:
+    - {attribute: x, value: '4'}
+    - {attribute: y, value: '1'}
+    - {attribute: gt, value: '1'}
+  - name: goal1
+    object_class: goal
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '1'}
+    - {attribute: gt, value: '2'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '2'}
+    - {attribute: y, value: '2'}
+    - {attribute: playerNum, value: '0'}
+  - name: agent1
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '0'}
+    - {attribute: playerNum, value: '1'}
+  - name: dimensionlessHorizontalWall0
+    object_class: dimensionlessHorizontalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '4'}
+    - {attribute: pos, value: '0'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessHorizontalWall1
+    object_class: dimensionlessHorizontalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '4'}
+    - {attribute: pos, value: '3'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessVerticalWall0
+    object_class: dimensionlessVerticalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '2'}
+    - {attribute: pos, value: '0'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessVerticalWall1
+    object_class: dimensionlessVerticalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '2'}
+    - {attribute: pos, value: '5'}
+    - {attribute: wallType, value: '0'}
+  - name: goal0
+    object_class: goal
+    values:
+    - {attribute: x, value: '4'}
+    - {attribute: y, value: '1'}
+    - {attribute: gt, value: '1'}
+  - name: goal1
+    object_class: goal
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '1'}
+    - {attribute: gt, value: '2'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '3'}
+    - {attribute: y, value: '2'}
+    - {attribute: playerNum, value: '0'}
+  - name: agent1
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '0'}
+    - {attribute: playerNum, value: '1'}
+  - name: dimensionlessHorizontalWall0
+    object_class: dimensionlessHorizontalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '4'}
+    - {attribute: pos, value: '0'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessHorizontalWall1
+    object_class: dimensionlessHorizontalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '4'}
+    - {attribute: pos, value: '3'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessVerticalWall0
+    object_class: dimensionlessVerticalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '2'}
+    - {attribute: pos, value: '0'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessVerticalWall1
+    object_class: dimensionlessVerticalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '2'}
+    - {attribute: pos, value: '5'}
+    - {attribute: wallType, value: '0'}
+  - name: goal0
+    object_class: goal
+    values:
+    - {attribute: x, value: '4'}
+    - {attribute: y, value: '1'}
+    - {attribute: gt, value: '1'}
+  - name: goal1
+    object_class: goal
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '1'}
+    - {attribute: gt, value: '2'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '4'}
+    - {attribute: y, value: '2'}
+    - {attribute: playerNum, value: '0'}
+  - name: agent1
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '0'}
+    - {attribute: playerNum, value: '1'}
+  - name: dimensionlessHorizontalWall0
+    object_class: dimensionlessHorizontalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '4'}
+    - {attribute: pos, value: '0'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessHorizontalWall1
+    object_class: dimensionlessHorizontalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '4'}
+    - {attribute: pos, value: '3'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessVerticalWall0
+    object_class: dimensionlessVerticalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '2'}
+    - {attribute: pos, value: '0'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessVerticalWall1
+    object_class: dimensionlessVerticalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '2'}
+    - {attribute: pos, value: '5'}
+    - {attribute: wallType, value: '0'}
+  - name: goal0
+    object_class: goal
+    values:
+    - {attribute: x, value: '4'}
+    - {attribute: y, value: '1'}
+    - {attribute: gt, value: '1'}
+  - name: goal1
+    object_class: goal
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '1'}
+    - {attribute: gt, value: '2'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '4'}
+    - {attribute: y, value: '1'}
+    - {attribute: playerNum, value: '0'}
+  - name: agent1
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '1'}
+    - {attribute: playerNum, value: '1'}
+  - name: dimensionlessHorizontalWall0
+    object_class: dimensionlessHorizontalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '4'}
+    - {attribute: pos, value: '0'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessHorizontalWall1
+    object_class: dimensionlessHorizontalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '4'}
+    - {attribute: pos, value: '3'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessVerticalWall0
+    object_class: dimensionlessVerticalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '2'}
+    - {attribute: pos, value: '0'}
+    - {attribute: wallType, value: '0'}
+  - name: dimensionlessVerticalWall1
+    object_class: dimensionlessVerticalWall
+    values:
+    - {attribute: end1, value: '0'}
+    - {attribute: end2, value: '2'}
+    - {attribute: pos, value: '5'}
+    - {attribute: wallType, value: '0'}
+  - name: goal0
+    object_class: goal
+    values:
+    - {attribute: x, value: '4'}
+    - {attribute: y, value: '1'}
+    - {attribute: gt, value: '1'}
+  - name: goal1
+    object_class: goal
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '1'}
+    - {attribute: gt, value: '2'}
