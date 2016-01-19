@@ -1,0 +1,31 @@
+%% Policy comparison metric
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{flushend}
+\usepackage[numbers]{natbib}
+%\usepackage{bbold}
+%\usepackage{dsfont}
+\newcommand{\unit}{1\!\!1}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\title{Policy Comparison Metric}
+\date{}
+\begin{document}
+\maketitle
+Policy comparison for rounds of a given game played between humans, and agents learning over given examples:
+\begin{align*} 
+S &=\textrm{set of total states in a game}\\
+S_H &= \textrm{set of states seen by human agents}\\
+E &= \textrm{set of states present/ seen in both agent and human games}\\
+\eta_S &= \frac{|E|}{|S_H|} = \textrm{state similarity metric} \\
+B_{s,a} &= \textrm{number of times action $a$ is taken from state $s \in E$ by the agents}\\
+B_{s} &= \textrm{most frequent action from $s$ by agents} = \argmax_{a} B_{s,a}\\
+H_{s,a} &= \textrm{number of times action $a$ is taken from state $s \in E$ by human players}\\
+H_{s} &= \textrm{most frequent action from $s$ by humans} = \argmax_{a} H_{s,a}\\
+\eta_P &= \frac{\sum_{s \in E} {\unit(B(s) == H(s))}}{|E|} = \textrm{number of times the actions with highest frequencies }\\
+&\textrm{ from a state match between humans and agents}
+\end{align*}
+\end{document}
