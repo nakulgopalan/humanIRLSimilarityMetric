@@ -28,4 +28,30 @@ H_{s} &= \textrm{most frequent action from $s$ by humans} = \argmax_{a} H_{s,a}\
 \eta_P &= \frac{\sum_{s \in E} {\unit(B(s) == H(s))}}{|E|} = \textrm{number of times the actions with highest frequencies }\\
 &\textrm{ from a state match between humans and agents}
 \end{align*}
+
+\section{Policy comparison metric for human policies and robot policies}
+The policies learned by human and the norm learning agent are similar if they take the same actions from similar states. We use the same number of example trajectories from human and the norm learning agent. We count the states and actions encountered in these trajectories. As the policy comparison metric we count the action taken with maximum frequency for each common state encountered in these trajectories. A common state is a state encountered in both human and agent trajectories. If the policies are similar the number of actions taken with highest frequency from each common state would be the same, and the ratio of similar actions to common states would be high. Further if the policies learned by the agents were similar they would reach common states, hence the ratio of common states to total states reached would also be high.
+
+\section{Policy comparison metric for agent - agent policies}
+A policy $\pi$ can be thought as a function that returns an action probability distribution given a state.
+If two policies are similar then the Kullback–Leibler (KL) \cite{kullback1951information} divergence of the action probabilities for each of the states encountered between the learned policy and the true policy would be low. We calculate mean KL divergence for all states, between the learned policy and the true policy action distribution. 
+
+\begin{thebibliography}{1}
+
+  \bibitem{kullback1951information} Kullback, Solomon and Leibler, Richard A {\em On information and sufficiency}, The annals of mathematical statistics,  1951.
+ 
+\end{thebibliography}
+  
+%  @article{kullback1951information,
+%  title={On information and sufficiency},
+%  author={Kullback, Solomon and Leibler, Richard A},
+%  journal={The annals of mathematical statistics},
+%  volume={22},
+%  number={1},
+%  pages={79--86},
+%  year={1951},
+%  publisher={JSTOR}
+%}
+
+
 \end{document}
